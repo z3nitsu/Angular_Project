@@ -1,0 +1,7 @@
+<div class="text-center" *ngIf="Data.length != 0; else noData">
+    Age: {{Data[0].age}}
+</div>
+
+<ng-template #noData>
+    <p class="text-center">No data present</p>
+</ng-template>

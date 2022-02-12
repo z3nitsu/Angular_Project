@@ -1,0 +1,17 @@
+
+
+<div class="container">
+  <div style="display: inline-block;position: fixed;top: 0;bottom: 0;left: 0;right: 0;width: 200px;height: 100px;margin: auto">
+    <div class="row">
+      <div class="col">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem *ngFor="let data of Data" (click)="ngDropDwonClick(data.Id)">{{data.name}}</button>
+          </div>
+        </div>
+      </div>
+  </div>
+    <app-child *ngIf="childLoad" [id]=id></app-child>
+  </div>
+</div>
